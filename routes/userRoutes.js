@@ -20,13 +20,14 @@ module.exports = app => {
 
         }
       }
-
       jsonfile.writeFile(file_path, content, function(err) {
         console.log(err);
       });
 
     });
+
     res.send(user);
+    
   });
 
   app.delete("/users/destroy", (req, res) => {
